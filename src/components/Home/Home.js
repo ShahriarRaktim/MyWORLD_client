@@ -2,10 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import docTeam from "../../image/10476.jpg";
-// import Homeservice from "../Homeservices/Homeservice";
+import Homeservices from "../Homeservices/Homeservices";
+
 import "./Home.css";
 
 const Home = () => {
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/plans")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
     <>
       {/* Banar Section */}
@@ -90,11 +97,11 @@ const Home = () => {
             been feeling to propel your career forward.
           </p>
         </div>
-        {/* <Row xs={1} md={2} lg={3} className="m-0 g-4">
+        <Row xs={1} md={2} lg={3} className="m-0 g-4">
           {services.map((service) => (
-            <Homeservice key={service.id} service={service}></Homeservice>
+            <Homeservices key={service.id} service={service}></Homeservices>
           ))}
-        </Row> */}
+        </Row>
       </section>
       {/* Review Section */}
       <section>
