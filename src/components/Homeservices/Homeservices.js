@@ -3,7 +3,7 @@ import { Card, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const Homeservices = ({service}) => {
-    const { name, summary, img, id } = service;
+    const { name, summary, img, id, _id } = service;
     return (
       <Col>
         <Card className="m-3 card">
@@ -11,7 +11,7 @@ const Homeservices = ({service}) => {
           <Card.Body>
             <Card.Title className="name">{name}</Card.Title>
             <Card.Text>{summary}</Card.Text>
-            <NavLink to={`/details/${id}`} className="contact">
+            <NavLink to={`/placeorder/${_id}`} className="contact">
               Details <i class="fas fa-arrow-alt-circle-right"></i>
             </NavLink>
           </Card.Body>

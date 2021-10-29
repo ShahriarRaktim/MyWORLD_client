@@ -1,0 +1,38 @@
+.all-footer{
+    background-color: rgb(9, 9, 43);
+    padding-bottom: 0.1%;
+}
+.all-footer p{
+    color: gray;
+    padding-top: 2%;
+}
+.footer{
+    text-align: start;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3%;
+    
+}
+.footer h1{
+    color: cyan;
+    font-size: 22px;
+}
+.footer h3{
+    color: rgb(14, 238, 216);
+    font-size: 16px;
+}
+.footer span{
+    color: white;
+}
+
+@media only screen and (max-width: 679px){
+    .footer h1{
+        font-size: 14px;
+    }
+    .footer h3{
+        font-size: 10px;
+    }
+    .all-footer p{
+        font-size: 10px;
+    }
+}

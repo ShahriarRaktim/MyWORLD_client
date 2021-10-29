@@ -39,8 +39,8 @@ const Header = () => {
                   HELP & FAQ{" "}
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link as={NavLink} to="/appointment" className="text-white">
-                APPOINTMENT
+              <Nav.Link as={NavLink} to="/mybooking" className="text-white">
+                MyBooking
               </Nav.Link>
             </Nav>
                         {/* Conditional username and logout nav */}
