@@ -1,0 +1,9 @@
+.register{
+    background-image: url("../../image/4873.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5% 10% 10% 10%;
+}
+.success {
+    margin-bottom: 10%;
+}
