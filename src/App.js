@@ -14,6 +14,8 @@ import Allplan from './components/Allplan/Allplan';
 import Allplans from './components/Allplans/Allplans';
 import Notfound from './components/Notfound/Notfound';
 import Addplan from './components/Addplan/Addplan';
+import Ourtour from './components/Ourtour/Ourtour';
+import Tour from './components/Tour/Tour';
 
 function App() {
   return (
@@ -33,6 +35,12 @@ function App() {
           </Route>
           <Route path="/register">
           <Register></Register>
+          </Route>
+          <Route path="/ourtour">
+            <Ourtour></Ourtour>
+          </Route>
+          <Route path="/tour">
+            <Tour></Tour>
           </Route>
           <PrivateRoute path="/placeorder/:planid">
             <PlaceOrder></PlaceOrder>

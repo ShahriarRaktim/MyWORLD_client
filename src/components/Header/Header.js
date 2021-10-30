@@ -20,7 +20,7 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/home" className="text-white">
                 HOME
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/services" className="text-white">
+              <Nav.Link as={NavLink} to="/ourtour" className="text-white">
                 SERVICES
               </Nav.Link>
               <NavDropdown title="PAGES" id="navbarScrollingDropdown">
