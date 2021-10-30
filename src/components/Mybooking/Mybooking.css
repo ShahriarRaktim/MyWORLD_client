@@ -1,0 +1,15 @@
+.my-booking{
+    padding: 10%;
+    color: rgb(23, 29, 28);
+    font-size: 40px;
+    font-weight: 600;
+    background-image: url("https://i.ibb.co/FxRMGwx/12364-min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 679px){
+    .my-booking{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

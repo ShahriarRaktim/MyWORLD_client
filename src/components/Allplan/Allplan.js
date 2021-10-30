@@ -23,7 +23,7 @@ const Allplan = ({service}) => {
           <Card.Body>
             <Card.Title className="name">{username} is going to {name} from {userreceiveplace}</Card.Title>
             <Card.Text>{summary}</Card.Text>
-            <button onClick={()=>handleDeleteAdmin(service._id)} className='contact'>Delete</button>
+            <button onClick={()=>handleDeleteAdmin(service._id)} className='delete'>Delete</button>
           </Card.Body>
         </Card>
       </Col>

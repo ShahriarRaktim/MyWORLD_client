@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import docTeam from "../../image/10476.jpg";
 import Homeservices from "../Homeservices/Homeservices";
 
 import "./Home.css";
@@ -27,7 +26,7 @@ const Home = () => {
       {/* Second Section */}
       <section className="doc-team">
         <div>
-          <img src={docTeam} alt="" />
+          <img src="https://i.ibb.co/DWg12jv/10476-min.jpg" alt="" />
         </div>
         <div>
           <div className="information">

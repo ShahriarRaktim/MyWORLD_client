@@ -67,6 +67,16 @@
     background-color: rgb(10, 10, 70);
     border-radius: 20px;
 }
+.delete{
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    padding: 5px 15px;
+    background-color: red;
+    border-radius: 20px;
+}
 .services{
     margin: 8% 0;
 }
@@ -116,6 +126,7 @@
 
 @media only screen and (max-width: 679px) {
     .banar{
+        margin-top: 10%;
         padding: 10% 40% 5% 0%;
         margin-left: 0;
     }

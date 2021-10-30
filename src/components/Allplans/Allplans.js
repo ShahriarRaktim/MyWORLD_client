@@ -12,8 +12,8 @@ const Allplans = () => {
       console.log(plans)
       console.log("ok")
     return (
-        <div className="mt-5">
-      <h1 className="mt-5">Those are all the Plans that Have Booked !</h1>
+        <div className="my-5">
+      <h1 className="my-booking">Those are all the Plans that Have Booked !</h1>
       <Row xs={1} md={2} lg={3} className="m-0 g-4">
         {plans.map((plan) => (
           <Allplan key={plan._id} service={plan}></Allplan>

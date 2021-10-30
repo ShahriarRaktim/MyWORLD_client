@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 import Mybooked from "../MyBooked/Mybooked";
+import './Mybooking.css'
 
 const Mybooking = () => {
   const [bookings, setBookings] = useState([]);
@@ -19,8 +20,8 @@ const Mybooking = () => {
   }, []);
   console.log(bookings);
   return (
-    <div className="mt-5">
-      <h1 className="mt-5">WOW ! You Have Booked {bookings.length} Plan !</h1>
+    <div className="my-5">
+      <h1 className="my-booking">WOW ! You Have Booked {bookings.length} Plan !</h1>
       <Row xs={1} md={2} lg={3} className="m-0 g-4">
         {bookings.map((booking) => (
           <Mybooked key={booking._id} service={booking}></Mybooked>

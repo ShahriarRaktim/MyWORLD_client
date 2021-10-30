@@ -59,35 +59,42 @@ const Servicedetails = ({ service }) => {
                     {...register("username")}
                     placeholder="Your Name"
                     defaultValue={user.displayName}
+                    required
                   />
                   <input
                     {...register("userreceiveplace")}
                     placeholder="Enter City name from where we will receive you"
+                    required
                   />
-                  <input {...register("usergender")} placeholder="Gender" />
+                  <input {...register("usergender")} placeholder="Gender" required />
                   <input
                     type="number"
                     {...register("userage")}
                     placeholder="Your Age"
+                    required
                   />
                   <input
                     type="number"
                     {...register("userpassport")}
                     placeholder="Your Passport Number"
+                    required
                   />
                   <input
                     {...register("userdate")}
                     placeholder="Enter Your tour starting date"
+                    required
                   />
                   <input
                     {...register("useremail")}
                     placeholder="Your Email"
                     defaultValue={user.email}
+                    required
                   />
                   <input
                     {...register("userdestination")}
                     placeholder="Your Destination"
                     defaultValue={`You are going to ${service?.name}`}
+                    required
                   />
                 </div>
 
