@@ -40,7 +40,10 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={NavLink} to="/mybooking" className="text-white">
-                MyBooking
+                MYPLAN
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/allplans" className="text-white">
+                ALLPLAN
               </Nav.Link>
             </Nav>
                         {/* Conditional username and logout nav */}

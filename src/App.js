@@ -10,6 +10,9 @@ import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import Footer from './components/Footer/Footer';
 import Mybooking from './components/Mybooking/Mybooking';
 import Mybooked from './components/MyBooked/Mybooked';
+import Allplan from './components/Allplan/Allplan';
+import Allplans from './components/Allplans/Allplans';
+import Notfound from './components/Notfound/Notfound';
 
 function App() {
   return (
@@ -39,6 +42,15 @@ function App() {
           <PrivateRoute path="/mybooked">
             <Mybooked></Mybooked>
           </PrivateRoute>
+          <PrivateRoute path="/allplans">
+            <Allplans></Allplans>
+          </PrivateRoute>
+          <PrivateRoute path="/allplan">
+            <Allplan></Allplan>
+          </PrivateRoute>
+        <PrivateRoute path="*">
+          <Notfound></Notfound>
+        </PrivateRoute>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

@@ -19,7 +19,7 @@ const Mybooking = () => {
   }, []);
   console.log(bookings);
   return (
-    <div>
+    <div className="mt-5">
       <h1 className="mt-5">WOW ! You Have Booked {bookings.length} Plan !</h1>
       <Row xs={1} md={2} lg={3} className="m-0 g-4">
         {bookings.map((booking) => (
