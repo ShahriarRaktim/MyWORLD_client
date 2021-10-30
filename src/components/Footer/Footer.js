@@ -29,14 +29,14 @@ const Footer = () => {
               <i class="fas fa-phone-square-alt"></i> <span>+1-604-555-5556</span>
             </h3>
             <h3>
-              <i class="fas fa-envelope"></i> <span>info@heavenhealth.com</span>
+              <i class="fas fa-envelope"></i> <span>info@myworld.com</span>
             </h3>
             <h3>
-              <i class="fas fa-envelope"></i> <span>suport@heavenhealth.com</span>
+              <i class="fas fa-envelope"></i> <span>suport@myworld.com</span>
             </h3>
           </div>
         </div>
-        <p>Copyright @ 2021, HeavenHealth. All rights reserved.</p>
+        <p>Copyright @ 2021, MyWORLD. All rights reserved.</p>
         </div>
     );
 };

@@ -16,6 +16,7 @@ import Notfound from './components/Notfound/Notfound';
 import Addplan from './components/Addplan/Addplan';
 import Ourtour from './components/Ourtour/Ourtour';
 import Tour from './components/Tour/Tour';
+import Help from './components/Help/Help';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/ourtour">
             <Ourtour></Ourtour>
+          </Route>
+          <Route path="/help">
+            <Help></Help>
           </Route>
           <Route path="/tour">
             <Tour></Tour>

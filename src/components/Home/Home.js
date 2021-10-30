@@ -20,7 +20,7 @@ const Home = () => {
         <h1>
           <span>BEST</span> Tour Management
         </h1>
-        <NavLink to="/about" className="about">
+        <NavLink to="/home" className="about">
           About Us <i class="fas fa-arrow-alt-circle-right"></i>
         </NavLink>
       </section>
@@ -77,7 +77,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <NavLink to="/ourdoctors" className="contact">
+          <NavLink to="/home" className="contact">
             More <i class="fas fa-arrow-alt-circle-right"></i>
           </NavLink>
         </div>
@@ -142,7 +142,7 @@ const Home = () => {
             occurs in an apparently irreversible succession from the past,
             through the present
           </h4>
-          <NavLink to="/review" className="contact">
+          <NavLink to="/home" className="contact">
             More Reviews <i class="fas fa-arrow-alt-circle-right"></i>
           </NavLink>
         </div>

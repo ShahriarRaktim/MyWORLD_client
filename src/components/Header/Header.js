@@ -23,31 +23,23 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/ourtour" className="text-white">
                 SERVICES
               </Nav.Link>
-              <NavDropdown title="PAGES" id="navbarScrollingDropdown">
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/ourdoctors"
-                  className="text-dark"
-                >
-                  OUR DOCTORS
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/question"
-                  className="text-dark"
-                >
-                  HELP & FAQ{" "}
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link as={NavLink} to="/mybooking" className="text-white">
+              <Nav.Link as={NavLink} to="/help" className="text-white">
+                HELP
+              </Nav.Link>
+              
+              {
+                user.email && <>
+                <Nav.Link as={NavLink} to="/mybooking" className="text-white">
                 MYPLAN
               </Nav.Link>
               <Nav.Link as={NavLink} to="/allplans" className="text-white">
-                ALLPLAN
+                MANAGEPLAN
               </Nav.Link>
               <Nav.Link as={NavLink} to="/addplan" className="text-white">
                 ADDPLAN
               </Nav.Link>
+                </>
+              }
             </Nav>
                         {/* Conditional username and logout nav */}
             <Nav>
