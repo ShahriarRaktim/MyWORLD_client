@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
+import { Row, Spinner } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 import Homeservices from "../Homeservices/Homeservices";
-
 import "./Home.css";
 
 const Home = () => {
   const [services, setServices] = useState([]);
+  const {isloading} =useAuth();
   useEffect(() => {
     fetch("https://secret-plateau-40724.herokuapp.com/plans")
       .then((res) => res.json())
@@ -14,6 +15,9 @@ const Home = () => {
   }, []);
   return (
     <>
+    {
+      isloading && <Spinner animation="border" />
+    }
       {/* Banar Section */}
       <section className="banar">
         <h1>
