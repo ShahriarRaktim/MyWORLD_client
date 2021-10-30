@@ -45,6 +45,9 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/allplans" className="text-white">
                 ALLPLAN
               </Nav.Link>
+              <Nav.Link as={NavLink} to="/addplan" className="text-white">
+                ADDPLAN
+              </Nav.Link>
             </Nav>
                         {/* Conditional username and logout nav */}
             <Nav>

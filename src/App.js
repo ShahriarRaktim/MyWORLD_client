@@ -13,6 +13,7 @@ import Mybooked from './components/MyBooked/Mybooked';
 import Allplan from './components/Allplan/Allplan';
 import Allplans from './components/Allplans/Allplans';
 import Notfound from './components/Notfound/Notfound';
+import Addplan from './components/Addplan/Addplan';
 
 function App() {
   return (
@@ -48,9 +49,12 @@ function App() {
           <PrivateRoute path="/allplan">
             <Allplan></Allplan>
           </PrivateRoute>
-        <PrivateRoute path="*">
+          <PrivateRoute path="/addplan">
+            <Addplan></Addplan>
+          </PrivateRoute>
+        <Route path="*">
           <Notfound></Notfound>
-        </PrivateRoute>
+        </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

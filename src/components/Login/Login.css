@@ -19,7 +19,7 @@
 .login-form p{
     color: white;
 }
-.input input{
+.input input, textarea{
     padding: 5px;
     border-radius: 10px;
     border: none;
