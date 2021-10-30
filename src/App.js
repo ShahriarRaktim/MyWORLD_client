@@ -9,6 +9,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import Footer from './components/Footer/Footer';
 import Mybooking from './components/Mybooking/Mybooking';
+import Mybooked from './components/MyBooked/Mybooked';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/mybooking">
             <Mybooking></Mybooking>
+          </PrivateRoute>
+          <PrivateRoute path="/mybooked">
+            <Mybooked></Mybooked>
           </PrivateRoute>
         </Switch>
         <Footer></Footer>

@@ -1,25 +1,32 @@
 import React, { useState } from "react";
 import { Card, Placeholder } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import PlaceOrder from "../PlaceOrder/PlaceOrder";
 import "./Servicedetails.css";
 
 const Servicedetails = ({ service }) => {
   const [isbook, setIsbook] = useState(true);
+  const [isbooked, setIsbooked] = useState(true);
   const { register, handleSubmit } = useForm();
   const { user } = useAuth();
 
   const onSubmit = (data) => {
-      data.tour = service;
-      
-      fetch('http://localhost:5000/booking', {
-          method: "POST",
-          headers: {"content-type": "application/json"},
-          body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(result => console.log(result))
+    data.tour = service;
+
+    fetch("https://secret-plateau-40724.herokuapp.com/booking", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          alert("Congratulation! Your booking conformed !");
+          setIsbooked(false);
+        }
+      });
   };
   const handleBooking = () => {
     setIsbook(false);
@@ -42,49 +49,60 @@ const Servicedetails = ({ service }) => {
           </Card.Body>
         </Card>
       ) : (
-        <div className="pt-5 login-form">
-          <h1 className="mb-4">Give us information for Booking</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="input">
-              <input
-                {...register("username")}
-                placeholder="Your Name"
-                defaultValue={user.displayName}
-              />
-              <input
-                {...register("userreceiveplace")}
-                placeholder="Enter City name from where we will receive you"
-              />
-              <input {...register("usergender")} placeholder="Gender" />
-              <input
-                type="number"
-                {...register("userage")}
-                placeholder="Your Age"
-              />
-              <input
-                type="number"
-                {...register("userpassport")}
-                placeholder="Your Passport Number"
-              />
-              <input
-                {...register("userdate")}
-                placeholder="Enter Your tour starting date"
-              />
-              <input
-                {...register("useremail")}
-                placeholder="Your Email"
-                defaultValue={user.email}
-              />
-              <input
-                {...register("userdestination")}
-                placeholder="Your Destination"
-                defaultValue={`You are going to ${service?.name}`}
-              />
-            </div>
+        <>
+          {isbooked ? (
+            <div className="pt-5 login-form">
+              <h1 className="mb-4">Give us information for Booking</h1>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="input">
+                  <input
+                    {...register("username")}
+                    placeholder="Your Name"
+                    defaultValue={user.displayName}
+                  />
+                  <input
+                    {...register("userreceiveplace")}
+                    placeholder="Enter City name from where we will receive you"
+                  />
+                  <input {...register("usergender")} placeholder="Gender" />
+                  <input
+                    type="number"
+                    {...register("userage")}
+                    placeholder="Your Age"
+                  />
+                  <input
+                    type="number"
+                    {...register("userpassport")}
+                    placeholder="Your Passport Number"
+                  />
+                  <input
+                    {...register("userdate")}
+                    placeholder="Enter Your tour starting date"
+                  />
+                  <input
+                    {...register("useremail")}
+                    placeholder="Your Email"
+                    defaultValue={user.email}
+                  />
+                  <input
+                    {...register("userdestination")}
+                    placeholder="Your Destination"
+                    defaultValue={`You are going to ${service?.name}`}
+                  />
+                </div>
 
-            <input className="login-btn" type="submit" />
-          </form>
-        </div>
+                <input className="login-btn" type="submit" />
+              </form>
+            </div>
+          ) : (
+            <div className="login-form">
+              <h1>Successfully Booked this plan !</h1>
+              <NavLink className="contact" to="/mybooking">
+              Your all Booked Plan <i class="fas fa-arrow-alt-circle-right"></i>
+              </NavLink>
+            </div>
+          )}
+        </>
       )}
     </>
   );

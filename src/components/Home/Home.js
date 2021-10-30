@@ -9,7 +9,7 @@ import "./Home.css";
 const Home = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/plans")
+    fetch("https://secret-plateau-40724.herokuapp.com/plans")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

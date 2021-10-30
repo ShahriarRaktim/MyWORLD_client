@@ -1,24 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import useAuth from '../../Hooks/useAuth';
+import React, { useEffect, useState } from "react";
+import { Row } from "react-bootstrap";
+import useAuth from "../../Hooks/useAuth";
+import Mybooked from "../MyBooked/Mybooked";
 
 const Mybooking = () => {
-    const [booking, setBooking] = useState([]);
-    const {user} = useAuth();
+  const [bookings, setBookings] = useState([]);
+  const { user } = useAuth();
 
-    useEffect(()=>{
-        fetch("http://localhost:5000/booking")
-        .then(res => res.json())
-        .then(results => {
-            const bookingCheak = results.filter(result => result.useremail === user.email)
-            setBooking(bookingCheak);
-        })
-    },[])
-    console.log(booking)
-    return (
-        <div>
-            <h1 className="mt-5">hi</h1>
-        </div>
-    );
+  useEffect(() => {
+    fetch("https://secret-plateau-40724.herokuapp.com/booking")
+      .then((res) => res.json())
+      .then((results) => {
+        const bookingCheak = results.filter(
+          (result) => result.useremail === user.email
+        );
+        setBookings(bookingCheak);
+      });
+  }, []);
+  console.log(bookings);
+  return (
+    <div>
+      <h1 className="mt-5">WOW ! You Have Booked {bookings.length} Plan !</h1>
+      <Row xs={1} md={2} lg={3} className="m-0 g-4">
+        {bookings.map((booking) => (
+          <Mybooked key={booking._id} service={booking}></Mybooked>
+        ))}
+      </Row>
+    </div>
+  );
 };
 
 export default Mybooking;
