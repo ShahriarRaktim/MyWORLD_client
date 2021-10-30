@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const Addplan = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
       console.log(data)
     fetch("https://secret-plateau-40724.herokuapp.com/addplan", {
@@ -14,7 +14,7 @@ const Addplan = () => {
     .then((result) => {
       if (result.insertedId) {
         alert("Dear Admin ! Your Plan Added !");
-        
+        reset();
       }
     });
   };
