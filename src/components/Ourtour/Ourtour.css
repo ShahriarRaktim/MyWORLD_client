@@ -1,0 +1,8 @@
+.ourtourimg{
+    margin-top: 2%;
+}
+@media only screen and (max-width: 679px) {
+    .ourtourimg{
+        margin-top: 15%;
+    }
+}

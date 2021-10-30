@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import Tour from "../Tour/Tour";
+import './Ourtour.css'
 
 const Ourtour = () => {
   const [services, setServices] = useState([]);
@@ -10,9 +11,9 @@ const Ourtour = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <div className='mb-5'>
+    <div className='ourtourimg'>
       <img
-        className="w-75"
+        className="w-75 "
         src="https://i.ibb.co/bL8Pc0M/30189-min.jpg"
         alt=""
       />
